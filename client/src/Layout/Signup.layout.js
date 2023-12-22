@@ -42,6 +42,47 @@ const ScreenMd =() =>{
     )
 };
 
+const ScreenLg =() =>{
+    return(
+    <div className="flex flex-row h-screen justify-center bg-gray-400">
+            <div className="mx-20 my-12 w-1/3 py-8 px-12 bg-white rounded">
+                <h2 className="text-3xl text-center font-semibold p-3">User Signup</h2>
+                <div className="px-2 py-2">
+                    <h3 className="text-md py-0.5"> Full Name</h3>
+                    <input className="w-full px-3 py-1 bg-gray-100 rounded" type="name" placeholder="Enter your name here"/>
+                </div>
+                <div className="px-2 py-2">
+                    <h3 className="text-md py-0.5">Email</h3>
+                    <input className="w-full px-3 py-1 bg-gray-100 rounded" type="email" placeholder="Enter your email here"/>
+                </div>
+                <div className="px-2 py-2">
+                    <h3 className="text-md py-0.5">Phone no.</h3>
+                    <input className="w-full px-3 py-1 bg-gray-100 rounded" type="phone" placeholder="Enter your phone number here"/>
+                </div>
+                <div className="px-2 py-2">
+                    <h3 className="text-md py-0.5">Password</h3>
+                    <input className="w-full px-3 py-1 bg-gray-100 rounded" type="password" placeholder="Enter a password here"/>
+                </div>
+
+                <div className="flex flex-row justify-center p-3">
+                    <button className="px-24 py-2 text-white bg-electricwaala-500 rounded-lg hover:bg-electricwaala-600">Signup</button>
+                </div>
+                <h3 className="text-md text-center">or Sign up using</h3>
+                <div className="flex flex-row justify-center p-3">
+                    <button className="px-20 py-2 text-white bg-electricwaala-500 rounded-lg hover:bg-electricwaala-600">
+                        <div className="flex flex-row justify-between gap-1">
+                            <div className="w-5">
+                                <FcGoogle className="w-full h-full" />
+                            </div>
+                            Google
+                        </div>
+                    </button>
+                </div>     
+            </div>
+        </div>
+    )
+};
+
 const SignupLayout = () => {
     const [credentials, setcredentials] = useState({name:"", email:"", password:"", phonenumber:""});
 
@@ -92,7 +133,7 @@ const SignupLayout = () => {
                 <h3 className="text-sm text-center">or</h3>
                 <h3 className="text-sm text-center">Sign up using</h3>
                 <div className="flex flex-row justify-center p-4">
-                    <button className="px-4 py-1 text-white bg-electricwaala-500 rounded-lg hover:bg-electricwaala-600" >
+                    <button className="px-4 py-1 text-white bg-electricwaala-500 rounded-lg hover:bg-electricwaala-600">
                         <div className="flex flex-row justify-between gap-1">
                             <div className="w-5">
                                 <FcGoogle className="w-full h-full" />
@@ -104,51 +145,12 @@ const SignupLayout = () => {
             </form>
         </div>    
         </div>
-
-
             <div className="hidden lg:hidden md:block">{
                 <ScreenMd />
             }</div>
-
-            
-            <div className="hidden lg:block">
-                <div className="flex flex-row h-screen justify-center bg-gray-400">
-                    <form className="mx-20 my-12 w-1/3 py-8 px-12 bg-white rounded" onSubmit={HandleSubmit}>
-                        <h2 className="text-3xl text-center font-semibold p-3">User Signup</h2>
-                        <div className="px-2 py-2">
-                            <h3 className="text-md py-0.5"> Full Name</h3>
-                            <input className="w-full px-3 py-1 bg-gray-100 rounded" type="name" placeholder="Enter your name here" value={credentials.name} onChange={onChange}/>
-                        </div>
-                        <div className="px-2 py-2">
-                            <h3 className="text-md py-0.5">Email</h3>
-                            <input className="w-full px-3 py-1 bg-gray-100 rounded" type="email" placeholder="Enter your email here" value={credentials.email} onChange={onChange}/>
-                        </div>
-                        <div className="px-2 py-2">
-                            <h3 className="text-md py-0.5">Phone no.</h3>
-                            <input className="w-full px-3 py-1 bg-gray-100 rounded" type="phone" placeholder="Enter your phone number here" value={credentials.phonenumber} onChange={onChange}/>
-                        </div>
-                        <div className="px-2 py-2">
-                            <h3 className="text-md py-0.5">Password</h3>
-                            <input className="w-full px-3 py-1 bg-gray-100 rounded" type="password" placeholder="Enter a password here" value={credentials.password} onChange={onChange}/>
-                        </div>
-
-                        <div className="flex flex-row justify-center p-3">
-                            <button className="px-24 py-2 text-white bg-electricwaala-500 rounded-lg hover:bg-electricwaala-600" type="submit">Signup</button>
-                        </div>
-                        <h3 className="text-md text-center">or Sign up using</h3>
-                        <div className="flex flex-row justify-center p-3">
-                            <button className="px-20 py-2 text-white bg-electricwaala-500 rounded-lg hover:bg-electricwaala-600">
-                                <div className="flex flex-row justify-between gap-1">
-                                    <div className="w-5">
-                                        <FcGoogle className="w-full h-full" />
-                                    </div>
-                                    Google
-                                </div>
-                            </button>
-                        </div>     
-                    </form>
-                </div>
-            </div>
+            <div className="hidden lg:block">{
+                <ScreenLg />
+            }</div>
         </div>
         </>
     )
