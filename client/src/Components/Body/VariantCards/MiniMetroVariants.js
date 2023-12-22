@@ -1,122 +1,49 @@
 import React from "react";
 
-const NavSm =() =>{
+const NavSm = () =>{
     return (
         <>
-        <h1 className="mx-32 font-bold text-4xl">Mini Metro</h1>
-        <div className="flex flex-row flex-wrap gap-8 justify-between my-10 mx-36">
+        <h1 className="mx-10 font-bold text-2xl">Mini Metro</h1>
+        <div className="flex flex-row flex-wrap gap-8 justify-center px-16 my-10">
             <div className="bg-white rounded-m shadow">
-                <div className="w-60 h-60">
+                <div className="w-80 h-48">
                     <img
-                    src="https://electricwaala.s3.ap-south-1.amazonaws.com/er.png"
-                    alt="Burger"
+                    src="https://electricwaala.s3.ap-south-1.amazonaws.com/gold-ms-e-rickshaw-mini.png"
+                    alt="Gold MS E Rickshaw"
                     className="w-full h-full"
                     />
                 </div>
-                <div>
-                    <h3 className="my-2 text-base font-medium">Kuku</h3>
+                <div className="mx-8 my-3">
+                    <h3 className="my-2 text-base font-medium mx-4">Gold MS E Rickshaw</h3>
+                    <h3 className="my-2 text-sm mx-4">Price: 1.45L</h3>
                 </div>
             </div>
 
             <div className="bg-white rounded-m shadow">
-                <div className="w-60 h-60">
+                <div className="w-80 h-48">
                     <img
-                    src="https://electricwaala.s3.ap-south-1.amazonaws.com/er.png"
-                    alt="Burger"
+                    src="https://electricwaala.s3.ap-south-1.amazonaws.com/gold-ss-e-rickshaw-mini.png"
+                    alt="Gold SS E Rickshaw"
                     className="w-full h-full"
                     />
                 </div>
                 <div>
-                    <h3 className="my-2 text-base font-medium">Kuku</h3>
+                    <h3 className="my-2 text-base font-medium mx-4">Gold SS E Rickshaw</h3>
+                    <h3 className="my-2 text-sm mx-4">Price: 1.62L</h3>
                 </div>
             </div>
 
             <div className="bg-white rounded-m shadow">
-                <div className="w-60 h-60">
+                <div className="w-80 h-48">
                     <img
-                    src="https://electricwaala.s3.ap-south-1.amazonaws.com/er.png"
-                    alt="Burger"
+                    src="https://electricwaala.s3.ap-south-1.amazonaws.com/ld-400-open-loader-mini.png"
+                    alt="M1 MS E Rickshaw"
                     className="w-full h-full"
                     />
                 </div>
                 <div>
-                    <h3 className="my-2 text-base font-medium">Kuku</h3>
-                </div>
-            </div>
-
-            <div className="bg-white rounded-m shadow">
-                <div className="w-60 h-60">
-                    <img
-                    src="https://electricwaala.s3.ap-south-1.amazonaws.com/er.png"
-                    alt="Burger"
-                    className="w-full h-full"
-                    />
-                </div>
-                <div>
-                    <h3 className="my-2 text-base font-medium">Kuku</h3>
-                </div>
-            </div>
-
-            <div className="bg-white rounded-m shadow">
-                <div className="w-60 h-60">
-                    <img
-                    src="https://electricwaala.s3.ap-south-1.amazonaws.com/er.png"
-                    alt="Burger"
-                    className="w-full h-full"
-                    />
-                </div>
-                <div>
-                    <h3 className="my-2 text-base font-medium">Kuku</h3>
-                </div>
-            </div>
-
-            <div className="bg-white rounded-m shadow">
-                <div className="w-60 h-60">
-                    <img
-                    src="https://electricwaala.s3.ap-south-1.amazonaws.com/er.png"
-                    alt="Burger"
-                    className="w-full h-full"
-                    />
-                </div>
-                <div>
-                    <h3 className="my-2 text-base font-medium">Kuku</h3>
-                </div>
-            </div>
-
-            <div className="bg-white rounded-m shadow">
-                <div className="w-60 h-60">
-                    <img
-                    src="https://electricwaala.s3.ap-south-1.amazonaws.com/er.png"
-                    alt="Burger"
-                    className="w-full h-full"
-                    />
-                </div>
-                <div>
-                    <h3 className="my-2 text-base font-medium">Kuku</h3>
-                </div>
-            </div>
-            <div className="bg-white rounded-m shadow">
-                <div className="w-60 h-60">
-                    <img
-                    src="https://electricwaala.s3.ap-south-1.amazonaws.com/er.png"
-                    alt="Burger"
-                    className="w-full h-full"
-                    />
-                </div>
-                <div>
-                    <h3 className="my-2 text-base font-medium">Kuku</h3>
-                </div>
-            </div>
-            <div className="bg-white rounded-m shadow">
-                <div className="w-60 h-60">
-                    <img
-                    src="https://electricwaala.s3.ap-south-1.amazonaws.com/er.png"
-                    alt="Burger"
-                    className="w-full h-full"
-                    />
-                </div>
-                <div>
-                    <h3 className="my-2 text-base font-medium">Kuku</h3>
+                    <h3 className="my-2 text-base font-medium mx-4">M1 MS E Rickshaw</h3>
+                    <h3 className="my-2 text-sm mx-4">Price: 1.62L</h3>
                 </div>
             </div>
         </div>
@@ -128,18 +55,18 @@ const NavMd =() =>{
     return (
         <>
         <h1 className="mx-16 font-bold text-4xl">Mini Metro</h1>
-        <div className="flex flex-row flex-wrap gap-8 justify-between my-10 mx-20">
+        <div className="flex flex-row flex-wrap gap-8 justify-between my-10 mx-12">
             <div className="bg-white rounded-m shadow">
                 <div className="w-80 h-52">
                     <img
                     src="https://electricwaala.s3.ap-south-1.amazonaws.com/gold-ms-e-rickshaw-mini.png"
-                    alt="Burger"
+                    alt="Gold MS E Rickshaw"
                     className="w-full h-full"
                     />
                 </div>
                 <div>
-                    <h3 className="my-2 text-base font-medium">Gold MS E Rickshaw</h3>
-                    <h3 className="my-2 text-sm">Price: 1.45L</h3>
+                    <h3 className="my-2 text-base font-medium mx-4">Gold MS E Rickshaw</h3>
+                    <h3 className="my-2 text-sm mx-4">Price: 1.45L</h3>
                 </div>
             </div>
 
@@ -147,13 +74,13 @@ const NavMd =() =>{
                 <div className="w-80 h-52">
                     <img
                     src="https://electricwaala.s3.ap-south-1.amazonaws.com/gold-ss-e-rickshaw-mini.png"
-                    alt="Burger"
+                    alt="Gold MS E Rickshaw"
                     className="w-full h-full"
                     />
                 </div>
                 <div>
-                    <h3 className="my-2 text-base font-medium">Gold SS E Rickshaw</h3>
-                    <h3 className="my-2 text-sm">Price: 1.62L</h3>
+                    <h3 className="my-2 text-base font-medium mx-4">Gold SS E Rickshaw</h3>
+                    <h3 className="my-2 text-sm mx-4">Price: 1.62L</h3>
                 </div>
             </div>
 
@@ -161,13 +88,13 @@ const NavMd =() =>{
                 <div className="w-80 h-52">
                     <img
                     src="https://electricwaala.s3.ap-south-1.amazonaws.com/ld-400-open-loader-mini.png"
-                    alt="Burger"
+                    alt="Gold MS E Rickshaw"
                     className="w-full h-full"
                     />
                 </div>
                 <div>
-                    <h3 className="my-2 text-base font-medium">M1 MS E Rickshaw</h3>
-                    <h3 className="my-2 text-sm">Price: 1.62L</h3>
+                    <h3 className="my-2 text-base font-medium mx-4">M1 MS E Rickshaw</h3>
+                    <h3 className="my-2 text-sm mx-4">Price: 1.62L</h3>
                 </div>
             </div>
         </div>
@@ -179,46 +106,46 @@ const NavLg =() =>{
     return (
         <>
         <h1 className="mx-28 font-bold text-4xl">Mini Metro</h1>
-        <div className="flex flex-row flex-wrap gap-4 justify-between my-10 mx-32">
+        <div className="flex flex-row flex-wrap gap-8 justify-between my-10 mx-32">
             <div className="bg-white rounded-m shadow">
-                <div className="w-88 h-60">
+                <div className="w-96 h-60">
                     <img
                     src="https://electricwaala.s3.ap-south-1.amazonaws.com/gold-ms-e-rickshaw-mini.png"
-                    alt="Burger"
+                    alt="Gold MS E Rickshaw"
                     className="w-full h-full"
                     />
                 </div>
                 <div>
-                    <h3 className="my-2 text-base font-medium">Gold MS E Rickshaw</h3>
-                    <h3 className="my-2 text-sm">Price: 1.45L</h3>
+                    <h3 className="my-2 text-base font-medium mx-4">Gold MS E Rickshaw</h3>
+                    <h3 className="my-2 text-sm mx-4">Price: 1.45L</h3>
                 </div>
             </div>
 
             <div className="bg-white rounded-m shadow">
-                <div className="w-88 h-60">
+                <div className="w-96 h-60">
                     <img
                     src="https://electricwaala.s3.ap-south-1.amazonaws.com/gold-ss-e-rickshaw-mini.png"
-                    alt="Burger"
+                    alt="Gold MS E Rickshaw"
                     className="w-full h-full"
                     />
                 </div>
                 <div>
-                    <h3 className="my-2 text-base font-medium">Gold SS E Rickshaw</h3>
-                    <h3 className="my-2 text-sm">Price: 1.62L</h3>
+                    <h3 className="my-2 text-base font-medium mx-4">Gold SS E Rickshaw</h3>
+                    <h3 className="my-2 text-sm mx-4">Price: 1.62L</h3>
                 </div>
             </div>
 
             <div className="bg-white rounded-m shadow">
-                <div className="w-88 h-60">
+                <div className="w-96 h-60">
                     <img
                     src="https://electricwaala.s3.ap-south-1.amazonaws.com/ld-400-open-loader-mini.png"
-                    alt="Burger"
+                    alt="Gold MS E Rickshaw"
                     className="w-full h-full"
                     />
                 </div>
                 <div>
-                    <h3 className="my-2 text-base font-medium">M1 MS E Rickshaw</h3>
-                    <h3 className="my-2 text-sm">Price: 1.62L</h3>
+                    <h3 className="my-2 text-base font-medium mx-4">M1 MS E Rickshaw</h3>
+                    <h3 className="my-2 text-sm mx-4">Price: 1.62L</h3>
                 </div>
             </div>
         </div>

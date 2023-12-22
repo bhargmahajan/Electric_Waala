@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
-import Variant from "../Components/Body/VariantCards/MiniMetroVariants";
+import MiniMetroVariants from "../Components/Body/VariantCards/MiniMetroVariants";
+import SarthiVariant from "../Components/Body/VariantCards/SarthiVariant";
+import KomakiVariant from "../Components/Body/VariantCards/KomakiVariants";
 import BrandCarousal from "../Components/Body/Brands/brandCarousal";
 
 const HomeLayout = () => {
@@ -8,7 +10,9 @@ const HomeLayout = () => {
         <>
         <Navbar />
         <BrandCarousal/>
-        <Variant />
+        <MiniMetroVariants />
+        <SarthiVariant />
+        <KomakiVariant />
         </>
     );
 };
