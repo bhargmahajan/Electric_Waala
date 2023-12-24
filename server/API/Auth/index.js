@@ -6,8 +6,6 @@ const Router = express.Router();
 import { UserModel } from "../../Database/user";
 import { ValidateSignup, ValidateSignin } from "../../Validation/auth";
 
-
-
 /*
     Route           /signup
     Descrip         Signup with email and password

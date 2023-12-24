@@ -36,6 +36,15 @@ routeConfig(passport);
 
 //For application routes
 //localhost:3000/auth/signup
+electricwaala.use((req,res,next) => {
+    res.setHeader("Access-Control-Allow-Origin","http://localhost:3000");
+    res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+});
+
 electricwaala.use("/auth", Auth);
 electricwaala.use("/brand", Brand);
 electricwaala.use("/product", Product);
