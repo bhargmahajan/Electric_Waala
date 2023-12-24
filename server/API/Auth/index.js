@@ -16,11 +16,13 @@ import { ValidateSignup, ValidateSignin } from "../../Validation/auth";
 
 Router.post("/signup", async(req, res) => {
     try {
-        await ValidateSignup(req.body.credentials);       
-        await UserModel.findEmailAndPhone(req.body.credentials);
+        const {fullname, email, phoneNumber, password} = req.body;
+        await ValidateSignup({fullname, email, phoneNumber, password});
+
+        await UserModel.findEmailAndPhone({email, phoneNumber});
 
         //Database
-        const newUser = await UserModel.create(req.body.credentials);
+        const newUser = await UserModel.create({fullname, email, phoneNumber, password});
 
         //JWT Auth Token
         const token = newUser.generateJwtToken();

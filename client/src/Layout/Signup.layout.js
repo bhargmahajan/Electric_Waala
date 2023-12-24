@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FcGoogle } from "react-icons/fc";
 
 const SignupLayout = () => {
-    const [credentials, setcredentials] = useState({name:"", email:"", password:"", phonenumber:""});
+    const [credentials, setcredentials] = useState({fullname:"", email:"", password:"", phonenumber:""});
 
     const HandleSubmit = async(e) => {
         e.preventDefault();
@@ -11,7 +11,7 @@ const SignupLayout = () => {
             headers:{
                 'Content-Type':'application/json'
             },
-            body: JSON.stringify({name: credentials.name, email:credentials.email, password:credentials.password, phonenumber:credentials.phonenumber})
+            body: JSON.stringify({fullname: credentials.fullname, email: credentials.email, password: credentials.password, phoneNumber: credentials.phoneNumber})
         });
         const json = await response.json();
         console.log(json);
@@ -35,16 +35,16 @@ const SignupLayout = () => {
                 <form className="m-12 w-2/3 py-10 px-6 bg-white rounded" onSubmit={HandleSubmit}>
                     <h2 className="text-xl text-center font-semibold p-2">User Signup</h2>
                     <div className="px-2 py-0.5">
-                        <label htmlFor="name" className="text-sm py-1"> Full Name</label>
-                        <input className="w-full px-3 py-0.5 bg-gray-100 rounded" type='name' placeholder="Enter name" name='name' value={credentials.name} onChange={onChange}/>
+                        <label htmlFor="fullname" className="text-sm py-1"> Full Name</label>
+                        <input className="w-full px-3 py-0.5 bg-gray-100 rounded" type='name' placeholder="Enter name" name='fullname' value={credentials.fullname} onChange={onChange}/>
                     </div>
                     <div className="px-2 py-0.5">
                         <label htmlFor="email" className="text-sm py-0.5">Email</label>
                         <input className="w-full px-3 py-1 bg-gray-100 rounded" type="email" placeholder="Enter email" name='email' value={credentials.email} onChange={onChange}/>
                     </div>
                     <div className="px-2 py-0.5">
-                        <label htmlFor="phonenumber" className="text-sm py-0.5">Phone no.</label>
-                        <input className="w-full px-3 py-1 bg-gray-100 rounded" type="phone" placeholder="Enter phone no" name='phonenumber' value={credentials.phonenumber} onChange={onChange}/>
+                        <label htmlFor="phoneNumber" className="text-sm py-0.5">Phone no.</label>
+                        <input className="w-full px-3 py-1 bg-gray-100 rounded" type="phone" placeholder="Enter phone no" name='phoneNumber' value={credentials.phoneNumber} onChange={onChange}/>
                     </div>
                     <div className="px-2 py-0.5">
                         <label htmlFor="password" className="text-sm py-0.5">Password</label>
@@ -75,19 +75,19 @@ const SignupLayout = () => {
                 <form className="mx-16 my-14 w-1/2 py-2 px-12 bg-white rounded" onSubmit={HandleSubmit}>
                     <h2 className="text-2xl text-center font-semibold p-3">User Signup</h2>
                     <div className="px-2 py-0.5">
-                        <label htmlFor="name" className="text-md py-1"> Full Name</label>
-                        <input className="w-full px-3 py-1 bg-gray-100 rounded"  type="name" placeholder="Enter your name here" name='name' value={credentials.name} onChange={onChange}/>
+                        <label htmlFor="fullname" className="text-md py-1"> Full Name</label>
+                        <input className="w-full px-3 py-1 bg-gray-100 rounded"  type="name" placeholder="Enter your name here" name='fullname' value={credentials.fullname} onChange={onChange}/>
                     </div>
                     <div className="px-2 py-0.5">
                         <label htmlFor="email" className="text-md py-1">Email</label>
                         <input className="w-full px-3 py-1 bg-gray-100 rounded" type="email" placeholder="Enter your email here" name='email' value={credentials.email} onChange={onChange}/>
                     </div>
                     <div className="px-2 py-0.5">
-                        <label className="text-md py-1">Phone no.</label>
-                        <input className="w-full px-3 py-1 bg-gray-100 rounded" type="phone" placeholder="Enter your phone number here" name='phonenumber' value={credentials.phonenumber} onChange={onChange}/>
+                        <label htmlFor="phoneNumber" className="text-md py-1">Phone no.</label>
+                        <input className="w-full px-3 py-1 bg-gray-100 rounded" type="number" placeholder="Enter your phone number here" name='phoneNumber' value={credentials.phoneNumber} onChange={onChange}/>
                     </div>
                     <div className="px-2 py-0.5">
-                        <label className="text-md py-1">Password</label>
+                        <label htmlFor="password" className="text-md py-1">Password</label>
                         <input className="w-full px-3 py-1 bg-gray-100 rounded" type="password" placeholder="Enter a password here" name='password' value={credentials.password} onChange={onChange}/>
                     </div>
 
@@ -114,19 +114,19 @@ const SignupLayout = () => {
                 <form className="mx-20 my-12 w-1/3 py-8 px-12 bg-white rounded" onSubmit={HandleSubmit}>
                     <h2 className="text-3xl text-center font-semibold p-3">User Signup</h2>
                     <div className="px-2 py-2">
-                        <label htmlFor="name" className="text-md py-0.5"> Full Name</label>
-                        <input className="w-full px-3 py-1 bg-gray-100 rounded"  type="name" placeholder="Enter your name here" name='name' value={credentials.name} onChange={onChange}/>
+                        <label htmlFor="fullname" className="text-md py-0.5"> Full Name</label>
+                        <input className="w-full px-3 py-1 bg-gray-100 rounded"  type="name" placeholder="Enter your name here" name='fullname' value={credentials.fullname} onChange={onChange}/>
                     </div>
                     <div className="px-2 py-2">
                         <label htmlFor="email" className="text-md py-0.5">Email</label>
                         <input className="w-full px-3 py-1 bg-gray-100 rounded" type="email" placeholder="Enter your email here" name='email' value={credentials.email} onChange={onChange}/>
                     </div>
                     <div className="px-2 py-2">
-                        <label className="text-md py-0.5">Phone no.</label>
-                        <input className="w-full px-3 py-1 bg-gray-100 rounded" type="phone" placeholder="Enter your phone number here" name='phonenumber' value={credentials.phonenumber} onChange={onChange}/>
+                        <label htmlFor="phoneNumber" className="text-md py-0.5">Phone no.</label>
+                        <input className="w-full px-3 py-1 bg-gray-100 rounded" type="phone" placeholder="Enter your phone number here" name='phoneNumber' value={credentials.phoneNumber} onChange={onChange}/>
                     </div>
                     <div className="px-2 py-2">
-                        <label className="text-md py-0.5">Password</label>
+                        <label htmlFor="password" className="text-md py-0.5">Password</label>
                         <input className="w-full px-3 py-1 bg-gray-100 rounded" type="password" placeholder="Enter a password here" name='password' value={credentials.password} onChange={onChange}/>
                     </div>
 
