@@ -21,13 +21,7 @@ const ReviewSchema = new mongoose.Schema(
         reviewText: {
             type: String,
             required: true
-        },
-        photos: [
-            {
-                type: mongoose.Types.ObjectId,
-                ref: "Images"
-            }
-        ]
+        }
     },
     {
         timestamps: true

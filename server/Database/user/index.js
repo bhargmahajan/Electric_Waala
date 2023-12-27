@@ -19,6 +19,14 @@ const UserSchema = new mongoose.Schema(
             {
                 type: Number
             }
+        ],
+        tokens: [
+            {
+                token: {
+                    type: String,
+                    required: true
+                }
+            }
         ]
     },
     {
@@ -26,8 +34,11 @@ const UserSchema = new mongoose.Schema(
     }
 );
 
-UserSchema.methods.generateJwtToken = function() {
-    return jwt.sign({user: this._id.toString()}, "ElectricWaalaApp");
+UserSchema.methods.generateJwtToken = async function() {
+    let token = jwt.sign({user: this._id.toString()}, "ElectricWaalaApp");
+    this.tokens = this.tokens.concat({token: token});
+    await this.save();
+    return token;
 }
 
 UserSchema.statics.findEmailAndPhone = async ({ email, phoneNumber }) => {

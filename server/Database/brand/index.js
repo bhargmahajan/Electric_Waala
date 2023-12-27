@@ -6,18 +6,6 @@ const BrandSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        city: {
-            type: String,
-            required: true
-        },
-        address: {
-            type: String,
-            required: true
-        },
-        mapLocation: {
-            type: String,
-            required: true
-        },
         VariantImages: {
             type: mongoose.Types.ObjectId,
             ref: "Images"

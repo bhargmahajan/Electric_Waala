@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { BiSearch, BiChevronDown } from "react-icons/bi";
+import axios from "axios";
 
 const NavSm =() =>{
+
     return (
         <>
         <div className="items-center justify-between py-4 px-2 flex w-full shadow-md">
@@ -77,7 +79,7 @@ const NavLg =() =>{
                     <BiSearch />
                     <input 
                     type="search" 
-                    className="w-full focus:outline-none" 
+                    className="w-full focus:outline-none bg-gray-50" 
                     placeholder="Search here"
                     />
                 </div>
@@ -88,12 +90,13 @@ const NavLg =() =>{
                     Jaipur
                     <BiChevronDown/>
                 </span>
+
                 <Link to="/signin">
                     <button className="bg-electricwaala-400 text-white py-2 px-3 rounded-full">Signin/ Signup</button>
                 </Link>
-                <span className="border p-3 border-electricwaala-300 text-electricwaala-800 rounded-full">
-                    <CgProfile />
-                </span>
+                    <span className="border p-3 border-electricwaala-300 text-electricwaala-800 rounded-full">
+                        <CgProfile />
+                    </span>                
             </div>  
         </div>
     )

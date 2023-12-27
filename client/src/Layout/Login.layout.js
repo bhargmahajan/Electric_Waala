@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 
 const LoginLayout = () => {
@@ -12,13 +12,14 @@ const LoginLayout = () => {
             headers:{
                 'Content-Type':'application/json'
             },
-            body: JSON.stringify({email: credentials.email, password: credentials.password,})
+            body: JSON.stringify({email: credentials.email, password: credentials.password})
         });
         const json = await response.json();
         console.log(json);
+
         
         if(!json.error) {
-            alert("success");
+            alert("Success");
         }
         else {
             alert("Failed");
@@ -27,6 +28,10 @@ const LoginLayout = () => {
 
     const onChange = (event) => {
         setcredentials({...credentials, [event.target.name]:event.target.value})
+    }
+
+    const clickHandle = () => {
+        window.open("http://localhost:4000/auth/google","_self")
     }
 
     return (
@@ -50,7 +55,7 @@ const LoginLayout = () => {
                     <h3 className="text-sm text-center">or</h3>
                     <h3 className="text-sm text-center">Signin using</h3>
                     <div className="flex flex-row justify-center p-3">
-                        <button className="px-4 py-1 text-white bg-electricwaala-500 rounded-lg hover:bg-electricwaala-600">
+                        <button className="px-4 py-1 text-white bg-electricwaala-500 rounded-lg hover:bg-electricwaala-600" onClick={clickHandle}>
                             <div className="flex flex-row justify-between gap-1">
                                 <div className="w-5">
                                 <FcGoogle className="w-full h-full" />
@@ -86,7 +91,7 @@ const LoginLayout = () => {
                     </div>
                     <h3 className="text-sm text-center">or Signin using</h3>
                     <div className="flex flex-row justify-center p-3">
-                        <button className="px-20 py-2 text-white bg-electricwaala-500 rounded-lg hover:bg-electricwaala-600">
+                        <button className="px-20 py-2 text-white bg-electricwaala-500 rounded-lg hover:bg-electricwaala-600" onClick={clickHandle}>
                             <div className="flex flex-row justify-between gap-1">
                                 <div className="w-5">
                                     <FcGoogle className="w-full h-full" />
@@ -123,7 +128,7 @@ const LoginLayout = () => {
                     </div>
                     <h3 className="text-md text-center">or Signin using</h3>
                     <div className="flex flex-row justify-center p-3">
-                        <button className="px-20 py-2 text-white bg-electricwaala-500 rounded-lg hover:bg-electricwaala-600">
+                        <button className="px-20 py-2 text-white bg-electricwaala-500 rounded-lg hover:bg-electricwaala-600" onClick={clickHandle}>
                             <div className="flex flex-row justify-between gap-1">
                                 <div className="w-5">
                                     <FcGoogle className="w-full h-full" />

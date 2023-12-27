@@ -28,6 +28,10 @@ const SignupLayout = () => {
         setcredentials({...credentials, [event.target.name]:event.target.value})
     }
 
+    const clickHandle = () => {
+        window.open("http://localhost:4000/auth/google","_self")
+    }
+
     return (
         <>
         <div className="md:hidden">
@@ -57,7 +61,7 @@ const SignupLayout = () => {
                     <h3 className="text-sm text-center">or</h3>
                     <h3 className="text-sm text-center">Sign up using</h3>
                     <div className="flex flex-row justify-center p-4">
-                        <button className="px-4 py-1 text-white bg-electricwaala-500 rounded-lg hover:bg-electricwaala-600">
+                        <button className="px-4 py-1 text-white bg-electricwaala-500 rounded-lg hover:bg-electricwaala-600" onClick={clickHandle}>
                             <div className="flex flex-row justify-between gap-1">
                                 <div className="w-5">
                                     <FcGoogle className="w-full h-full" />
@@ -96,7 +100,7 @@ const SignupLayout = () => {
                     </div>
                     <h3 className="text-sm text-center">or Sign up using</h3>
                     <div className="flex flex-row justify-center p-4">
-                        <button className="px-20 py-2 text-white bg-electricwaala-500 rounded-lg hover:bg-electricwaala-600">
+                        <button className="px-20 py-2 text-white bg-electricwaala-500 rounded-lg hover:bg-electricwaala-600"  onClick={clickHandle}>
                             <div className="flex flex-row justify-between gap-1">
                                 <div className="w-5">
                                     <FcGoogle className="w-full h-full" />
@@ -135,7 +139,7 @@ const SignupLayout = () => {
                     </div>
                     <h3 className="text-md text-center">or Sign up using</h3>
                     <div className="flex flex-row justify-center p-3">
-                        <button className="px-20 py-2 text-white bg-electricwaala-500 rounded-lg hover:bg-electricwaala-600">
+                        <button className="px-20 py-2 text-white bg-electricwaala-500 rounded-lg hover:bg-electricwaala-600" onClick={clickHandle}>
                             <div className="flex flex-row justify-between gap-1">
                                 <div className="w-5">
                                     <FcGoogle className="w-full h-full" />

@@ -25,9 +25,10 @@ Router.post("/signup", async(req, res) => {
         const newUser = await UserModel.create({fullname, email, phoneNumber, password});
 
         //JWT Auth Token
-        const token = newUser.generateJwtToken();
+        const token = await newUser.generateJwtToken();
 
         return res.status(200).json({token});
+
      
        } catch (error) {
         return res.status(500).json({error: error.message});
@@ -44,15 +45,20 @@ Router.post("/signup", async(req, res) => {
 
 Router.post("/signin", async(req, res) => {
     try {    
-        await ValidateSignin(req.body.credentials); 
-        const user = await UserModel.findByEmailAndPassword(
-            req.body.credentials
-        );
+        const {email, password} = req.body;
+
+        await ValidateSignin({email, password}); 
+        const user = await UserModel.findByEmailAndPassword({email, password});
 
         //JWT Auth Token
-        const token = user.generateJwtToken();
+        const token = await user.generateJwtToken();
 
-        return res.status(200).json({token, status: "Success"});
+        res.cookie("jwtoken", token, {
+            expires: new Date(Date.now()+ 25892000000),
+            httpOnly: true
+        });
+
+        return res.status(200).json({token, status: "Success"});    
      
        } catch (error) {
         return res.status(500).json({error: error.message});
@@ -64,13 +70,11 @@ Router.get("/google", passport.authenticate("google", {
         "https://www.googleapis.com/auth/userinfo.profile",
         "https://www.googleapis.com/auth/userinfo.email"
     ],
-})
-);
+}));
 
-Router.get("/google/callback", passport.authenticate("google", {failureRedirect: "/"}),
+Router.get("/google/callback", passport.authenticate("google", {failureRedirect: "http://localhost:3000/signup", successRedirect: "http://localhost:3000/"}),
 (req, res) => {
     return res.json({token: req.session.passport.user.token});
-}
-);
+});
 
 export default Router;

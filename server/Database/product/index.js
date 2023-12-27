@@ -10,10 +10,6 @@ const ProductSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        category: {
-            type: String,
-            required: true
-        },
         photos: {
             type: mongoose.Types.ObjectId,
             ref: "Images"
