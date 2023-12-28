@@ -13,6 +13,7 @@ import JangidVariant from "../Components/Body/VariantCards/JangidVariants";
 import KukuVariant from "../Components/Body/VariantCards/KukuVariants";
 import SSBVariant from "../Components/Body/VariantCards/SSBVariants";
 import BrandCarousal from "../Components/Body/Brands/brandCarousal";
+import Footer from "../Components/Footer/index";
 
 const HomeLayout = () => {
     return (
@@ -31,6 +32,7 @@ const HomeLayout = () => {
         <JangidVariant />
         <KukuVariant />
         <SSBVariant />
+        <Footer />
         </>
     );
 };
