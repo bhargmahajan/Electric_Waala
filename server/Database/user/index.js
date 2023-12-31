@@ -19,14 +19,6 @@ const UserSchema = new mongoose.Schema(
             {
                 type: Number
             }
-        ],
-        tokens: [
-            {
-                token: {
-                    type: String,
-                    required: true
-                }
-            }
         ]
     },
     {
@@ -35,10 +27,7 @@ const UserSchema = new mongoose.Schema(
 );
 
 UserSchema.methods.generateJwtToken = async function() {
-    let token = jwt.sign({user: this._id.toString()}, "ElectricWaalaApp");
-    this.tokens = this.tokens.concat({token: token});
-    await this.save();
-    return token;
+    return jwt.sign({user: this._id.toString()}, "ElectricwaalaApp");
 }
 
 UserSchema.statics.findEmailAndPhone = async ({ email, phoneNumber }) => {
@@ -58,7 +47,7 @@ UserSchema.statics.findByEmailAndPassword = async ({ email, password }) => {
     const user = await UserModel.findOne({email});
     if(!user) {
         throw new Error("User doesn't exist");
-      }
+    }
   
     //compare password
     const doesPasswordMatch = await bcrypt.compare(password, user.password);

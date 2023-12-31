@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Link} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 
-const LoginLayout = () => {
+const Signin = () => {
+    const navigate = useNavigate();
     const [credentials, setcredentials] = useState({email:"", password:""});
 
     const HandleSubmit = async(e) => {
@@ -16,13 +17,14 @@ const LoginLayout = () => {
         });
         const json = await response.json();
         console.log(json);
-
         
         if(!json.error) {
+            localStorage.setItem("token", json.token);
             alert("Success");
+            navigate("/");
         }
         else {
-            alert("Failed");
+            alert(json.error);
         }
     }
 
@@ -30,15 +32,15 @@ const LoginLayout = () => {
         setcredentials({...credentials, [event.target.name]:event.target.value})
     }
 
-    const clickHandle = () => {
-        window.open("http://localhost:4000/auth/google","_self")
+    const clickHandle = async(req,res) => {
+        window.open("http://localhost:4000/auth/google","_self");
     }
 
     return (
         <>
         <div className="md:hidden">
             <div className="flex flex-row h-screen justify-center bg-gray-400">
-                <form className="m-16 w-2/3 py-10 px-6 bg-white rounded" onSubmit={HandleSubmit}>
+                <form className="m-16 w-2/3 py-10 px-6 bg-white rounded" method="POST" onSubmit={HandleSubmit}>
                     <h2 className="text-2xl text-center font-semibold p-3">User Signin</h2>
                     <div className="px-2 py-1">
                         <label htmlFor="email" className="text-sm py-1">Email</label>
@@ -151,4 +153,4 @@ const LoginLayout = () => {
     )
 };
 
-export default LoginLayout;
+export default Signin;

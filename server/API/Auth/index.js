@@ -28,9 +28,7 @@ Router.post("/signup", async(req, res) => {
         const token = await newUser.generateJwtToken();
 
         return res.status(200).json({token});
-
-     
-       } catch (error) {
+    } catch (error) {
         return res.status(500).json({error: error.message});
     }
 });
@@ -53,14 +51,8 @@ Router.post("/signin", async(req, res) => {
         //JWT Auth Token
         const token = await user.generateJwtToken();
 
-        res.cookie("jwtoken", token, {
-            expires: new Date(Date.now()+ 25892000000),
-            httpOnly: true
-        });
-
-        return res.status(200).json({token, status: "Success"});    
-     
-       } catch (error) {
+        return res.status(200).json({token, status: "Success"});
+    } catch (error) {
         return res.status(500).json({error: error.message});
     }
 });
@@ -72,8 +64,9 @@ Router.get("/google", passport.authenticate("google", {
     ],
 }));
 
-Router.get("/google/callback", passport.authenticate("google", {failureRedirect: "http://localhost:3000/signup", successRedirect: "http://localhost:3000/"}),
+Router.get("/google/callback", passport.authenticate("google", {failureRedirect: "http://localhost:3000/auth/google", successRedirect: "http://localhost:3000/"}),
 (req, res) => {
+    localStorage.setItem("token", req.session.passport.user.token);
     return res.json({token: req.session.passport.user.token});
 });
 

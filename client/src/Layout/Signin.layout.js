@@ -1,10 +1,10 @@
 import React from "react";
-import Signup from "../Components/Signup/index";
+import Signin from "../Components/Signin/index";
 
 const SigninLayout = () => {
     return (
         <>
-        <Signup />
+        <Signin />
         </>
     )
 };

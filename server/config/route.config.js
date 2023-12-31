@@ -8,7 +8,7 @@ const ExtractJwt = JwtPassport.ExtractJwt;
 
 const options = {
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-  secretOrKey: "ElectricWaalaApp"
+  secretOrKey: "ElectricwaalaApp"
 };
 
 export default (passport) => {

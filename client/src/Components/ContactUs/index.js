@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FiPhone } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
+import { useNavigate } from "react-router-dom";
 
 const ContactUs = () => {
+    const navigate = useNavigate();
+
+    const callContactUsPage = () => {
+        try {
+            if(!localStorage.getItem("token")) {
+                throw new Error("not Signed in");
+            }
+        } catch(err) {
+            console.log(err);
+            navigate("/signin");
+        }
+    }
+
+    useEffect(() => {
+        callContactUsPage();
+    });
+
     return (
         <>
         <div className="md:hidden lg:hidden">
@@ -38,7 +56,7 @@ const ContactUs = () => {
                         </div>
                         <div className="px-2">
                             <h2 className="text-sm">Mobile</h2>
-                            <h2 className="text-sm">0123456789</h2>
+                            <h2 className="text-sm">+91 8306969413</h2>
                         </div>
                     </div>
                 
@@ -74,7 +92,7 @@ const ContactUs = () => {
                     </div>
                     <div className="px-1">
                         <h2 className="text-sm">Mobile</h2>
-                        <h2 className="text-sm">0123456789</h2>
+                        <h2 className="text-sm">+91 8306969413</h2>
                     </div>
                 </div>
                 
@@ -132,7 +150,7 @@ const ContactUs = () => {
                     </div>
                     <div className="px-4">
                         <h2>Mobile</h2>
-                        <h2>0123456789</h2>
+                        <h2>+91 8306969413</h2>
                     </div>
                 </div>
                 
