@@ -1,10 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavSm = () =>{
     return (
         <>
         <h1 className="mx-10 font-bold text-2xl">Komaki</h1>
         <div className="flex flex-row flex-wrap gap-8 justify-center px-16 my-10">
+        <Link to="/fully">
             <div className="bg-white rounded-m shadow">
                 <div className="w-80 h-48">
                     <img
@@ -18,8 +20,9 @@ const NavSm = () =>{
                     <h3 className="my-2 text-sm mx-4">Price: 1.45L</h3>
                 </div>
             </div>
+            </Link>
 
-            <div className="bg-white rounded-m shadow">
+            <Link to="/superdelux"><div className="bg-white rounded-m shadow">
                 <div className="w-80 h-48">
                     <img
                     src="https://electricwaala.s3.ap-south-1.amazonaws.com/super-delux-komaki.png"
@@ -32,6 +35,7 @@ const NavSm = () =>{
                     <h3 className="my-2 text-sm mx-4">Price: 1.62L</h3>
                 </div>
             </div>
+            </Link>
         </div>
         </>
     );
@@ -42,6 +46,7 @@ const NavMd =() =>{
         <>
         <h1 className="mx-16 font-bold text-4xl">Komaki</h1>
         <div className="flex flex-row flex-wrap gap-8 justify-between my-10 mx-12">
+        <Link to="/fully">
             <div className="bg-white rounded-m shadow">
                 <div className="w-80 h-52">
                     <img
@@ -55,7 +60,9 @@ const NavMd =() =>{
                     <h3 className="my-2 text-sm mx-4">Price: 1.62L</h3>
                 </div>
             </div>
+            </Link>
 
+            <Link to="/superdelux">
             <div className="bg-white rounded-m shadow">
                 <div className="w-80 h-52">
                     <img
@@ -69,6 +76,7 @@ const NavMd =() =>{
                     <h3 className="my-2 text-sm mx-4">Price: 1.62L</h3>
                 </div>
             </div>
+            </Link>
         </div>
         </>
     )
@@ -79,6 +87,7 @@ const NavLg =() =>{
         <>
         <h1 className="mx-28 font-bold text-4xl">Komaki</h1>
         <div className="flex flex-row flex-wrap gap-12 justify-start my-10 mx-32">
+        <Link to="/fully">
             <div className="bg-white rounded-m shadow">
                 <div className="w-96 h-60">
                     <img
@@ -92,7 +101,9 @@ const NavLg =() =>{
                     <h3 className="my-2 text-sm mx-4">Price: 1.45L</h3>
                 </div>
             </div>
+            </Link>
 
+            <Link to="/superdelux">
             <div className="bg-white rounded-m shadow">
                 <div className="w-96 h-60">
                     <img
@@ -106,6 +117,7 @@ const NavLg =() =>{
                     <h3 className="my-2 text-sm mx-4">Price: 1.62L</h3>
                 </div>
             </div>
+            </Link>
         </div>
         </>
     )

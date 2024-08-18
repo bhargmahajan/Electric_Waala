@@ -26,7 +26,7 @@ const ContactUs = () => {
         <>
         <div className="md:hidden lg:hidden">
             <h1 className="text-2xl flex font-semibold p-6 justify-center">Contact US</h1>
-            <div className="container py-1 flex flex-row justify-center">
+            <div className="py-1 flex flex-row justify-center">
                 <div className="w-2/3 p-2 shadow-lg rounded-md">
                     <div className="flex flex-col justify-between p-2 gap-4">
                         <div className="w-full"> 
@@ -117,7 +117,7 @@ const ContactUs = () => {
                 </div>
             </div>
 
-            <div className="container py-8 flex flex-row justify-center">
+            <div className="py-8 flex flex-row justify-center">
                 <div className="w-2/3 py-4 px-4 shadow-lg rounded-md">
                     <h1 className="text-3xl flex font-semibold py-4 px-2">Get in Touch</h1>
                     <div className="flex flex-row justify-between py-4 px-2 gap-4">
@@ -142,7 +142,7 @@ const ContactUs = () => {
         </div>
 
         <div className="hidden md:hidden lg:block">
-            <h1 className="container text-4xl flex font-semibold p-4 justify-center">Contact US</h1>
+            <h1 className="text-4xl flex font-semibold p-4 justify-center">Contact US</h1>
             <div className="flex flex-row py-7 px-28 justify-between gap-12">
                 <div className="px-5 py-2 flex w-1/3 flex-row shadow-md rounded-md">
                     <div className="w-12 px-2 h-full">
@@ -175,7 +175,7 @@ const ContactUs = () => {
                 </div>
             </div>
 
-            <div className="container py-8 flex flex-row justify-center">
+            <div className="py-8 flex flex-row justify-center">
                 <div className="w-2/3 py-4 px-6 shadow-lg rounded-md">
                     <h1 className="text-3xl flex font-semibold p-4">Get in Touch</h1>
                     <div className="flex flex-row justify-between p-4 gap-10">

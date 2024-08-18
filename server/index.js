@@ -17,6 +17,7 @@ import Product  from "./API/Product";
 import Variant from "./API/Variant";
 import Image from "./API/Image";
 import Review from "./API/Reviews";
+import User from "./API/User";
 
 //DB Connection
 import ConnectDB from "./Database/connection";
@@ -51,6 +52,7 @@ electricwaala.use("/product", Product);
 electricwaala.use("/variant", Variant);
 electricwaala.use("/image", Image);
 electricwaala.use("/review", Review);
+electricwaala.use("/profile", User);
 
 electricwaala.get("/", (req, res) => res.json({message: "Setup Success"}));
 

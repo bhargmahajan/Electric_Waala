@@ -65,9 +65,9 @@ Router.get("/google", passport.authenticate("google", {
 }));
 
 Router.get("/google/callback", passport.authenticate("google", {failureRedirect: "http://localhost:3000/auth/google", successRedirect: "http://localhost:3000/"}),
-(req, res) => {
-    localStorage.setItem("token", req.session.passport.user.token);
-    return res.json({token: req.session.passport.user.token});
+async(req, res) => {
+
+    return res.json({token: req.session.passport.user.generateJwtToken()});
 });
 
 export default Router;

@@ -13,10 +13,10 @@ Access          Public
 Method          Get
 */
 
-Router.post("/:_id", async(req, res) => {
+Router.get("/:_id", async(req, res) => {
     try {
         const {_id} = req.params;
-        const {guestUser} = await UserModel.findById(_id);
+        const {getUser} = await UserModel.findById(_id);
 
         return res.json({user: getUser});
     } catch (error) {
@@ -33,7 +33,7 @@ Access          Public
 Method          PUT
 */
 
-Router.post("/update/:_id", async(req, res) => {
+Router.put("/update/:_id", async(req, res) => {
     try {
         const {userId} = req.params;
         const {userData} = req.body;

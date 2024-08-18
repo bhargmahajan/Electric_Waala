@@ -15,7 +15,7 @@ const Footer = () => {
                 </Link>
             </div>
 
-            <div className="text-center pt-10 text-md">All Rights Reserved | CopyRight © 2023, Electric Wazla</div>
+            <div className="text-center pt-10 text-md">All Rights Reserved | CopyRight © 2023, Electric Waala</div>
         </div>
         </>
     )

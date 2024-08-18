@@ -18,7 +18,7 @@ const Navbar =() => {
                 <div className="items-center justify-between py-4 px-2 flex w-full shadow-md">
                     <div className="w-28">
                         <img
-                        src="#"
+                        src="https://electricwaala.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2024-03-01+at+09.48.09_0c4edfff.jpg"
                         alt="logo"
                         className="w-full h-full"
                         />
@@ -45,7 +45,7 @@ const Navbar =() => {
             </div>
 
             <div className="hidden lg:hidden md:flex w-full">
-                <div className="container items-center justify-between py-2 px-4 flex shadow-md">
+                <div className="items-center justify-between py-2 px-4 flex shadow-md">
                     <div className="flex items-center px-3 gap-12 w-3/4">
                         <div className="w-32 h-12">
                             <img 
@@ -87,24 +87,17 @@ const Navbar =() => {
             </div>
 
             <div className="hidden lg:flex">
-                <div className="container items-center justify-between py-4 px-2 flex w-full shadow-md">
+                <div className="items-center justify-between py-4 px-2 flex w-full shadow-md">
                     <div className="flex items-center px-4 gap-20 w-3/4">
-                        <div className="w-48 h-12">
+                        <div className="w-full h-20">
                             <img 
-                            src="https://electricwaala.s3.ap-south-1.amazonaws.com/er.png" 
+                            src="https://electricwaala.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2024-03-01+at+09.48.09_0c4edfff.jpg" 
                             alt="logo"
-                            className="w-full h-full"
+                            className="w-48 h-full"
                             />
                         </div>
 
-                        <div className="w-full flex items-center bg-gray-50 gap-3 px-3 py-2 rounded-sm">
-                            <BiSearch />
-                            <input 
-                            type="search" 
-                            className="w-full focus:outline-none bg-gray-50" 
-                            placeholder="Search here"
-                            />
-                        </div>
+                        
                     </div>
 
                     <div className="flex items-center gap-4 px-6">
@@ -125,7 +118,9 @@ const Navbar =() => {
                                 <button className="bg-electricwaala-400 text-white py-2 px-3 rounded-full" onClick={HandleSignout}>Signout</button>
                             </Link>
                             <span className="border p-3 border-electricwaala-300 text-electricwaala-800 rounded-full">
-                                <CgProfile />
+                                <Link to="/profile">
+                                    <CgProfile />
+                                </Link>
                             </span>
                         </div>
                         }                                  
